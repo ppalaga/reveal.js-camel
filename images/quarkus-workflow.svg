@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    viewBox="0 0 777.77051 576.7757"
    stroke-miterlimit="10"
@@ -15,7 +8,14 @@
    width="777.77051"
    height="576.7757"
    style="fill:none;stroke:none;stroke-linecap:square;stroke-miterlimit:10"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata240">
     <rdf:RDF>
@@ -24,7 +24,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -496,7 +495,7 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1838"
+     inkscape:window-width="1832"
      inkscape:window-height="1055"
      id="namedview236"
      showgrid="false"
@@ -506,9 +505,9 @@
      fit-margin-bottom="10"
      fit-margin-right="10"
      inkscape:zoom="1.35"
-     inkscape:cx="327.25428"
-     inkscape:cy="290.41689"
-     inkscape:window-x="82"
+     inkscape:cx="321.85185"
+     inkscape:cy="231.48148"
+     inkscape:window-x="88"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg234"
@@ -524,72 +523,46 @@
   </clipPath>
   <path
      id="path948"
-     d="m 373.88467,75.61499 v 40.85505"
+     d="m 389.88467,75.61499 v 40.85505"
      style="fill:none;fill-opacity:1;stroke:#93939c;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
   <path
      style="fill:none;fill-opacity:1;stroke:#93939c;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-3)"
-     d="m 373.67421,231.82323 v 40.85505"
+     d="m 389.88467,231.82323 v 40.85505"
      id="path948-7" />
   <path
      style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#93939c;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-3-3-2)"
-     d="m 463.92593,335.87571 c 34.39267,3.51249 77.68383,11.85777 124.43494,9.33325 12.67704,8.5866 26.59182,21.85892 48.15765,44.85513"
+     d="m 483.92593,335.87571 c 58.94524,1.59443 114.82076,18.73686 152.59259,54.18838"
      id="path948-7-6-1"
-     sodipodi:nodetypes="ccc" />
-  <path
-     sodipodi:nodetypes="cc"
-     id="path948-7-60"
-     d="m 488.88889,234.39424 c 44.29788,33.10727 67.93531,59.7824 99.47198,110.81472"
-     style="fill:none;fill-opacity:1;stroke:#93939c;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1" />
+     sodipodi:nodetypes="cc" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e76f00;fill-opacity:1;stroke:none;stroke-width:1.03529"
-     x="361.54953"
+     x="377.13614"
      y="30.352892"
      id="text901"
      transform="scale(1.0352867,0.96591601)"><tspan
        sodipodi:role="line"
        id="tspan1341"
-       x="361.54953"
+       x="377.13614"
        y="30.352892"
        style="font-size:26.6667px">Application</tspan><tspan
        sodipodi:role="line"
-       x="361.54953"
+       x="377.13614"
        y="63.686268"
        id="tspan939"
        style="font-size:26.6667px">bytecode</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.5096px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#74aff0;fill-opacity:1;stroke:none;stroke-width:1.03529;stroke-linecap:square;stroke-miterlimit:10"
-     x="270.73978"
+     x="284.16113"
      y="164.55093"
      id="text901-7"
      transform="scale(1.0352867,0.96591601)"><tspan
        sodipodi:role="line"
        id="tspan920"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.5093px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:4px;writing-mode:lr-tb;text-anchor:start;fill:#74aff0;fill-opacity:1"
-       x="270.73978"
+       x="284.16113"
        y="164.55093">QUARKUS</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.3333px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:square;stroke-miterlimit:10;"
-     x="375.18027"
-     y="309.7941"
-     id="text901-7-5"><tspan
-       sodipodi:role="line"
-       id="tspan1339"
-       x="375.18027"
-       y="309.7941"
-       style="font-size:29.3333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;">Enhanced</tspan><tspan
-       id="tspan946"
-       sodipodi:role="line"
-       x="375.18027"
-       y="346.46075"
-       style="font-size:29.3333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;">application</tspan><tspan
-       sodipodi:role="line"
-       x="375.18027"
-       y="383.12744"
-       style="font-size:29.3333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;"
-       id="tspan945">bytecode</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.3333px;line-height:1;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:square;stroke-miterlimit:10;"
@@ -725,16 +698,16 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:34.5093px;line-height:0.85;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     x="373.53119"
+     x="389.67374"
      y="186.27086"
      id="text924"><tspan
        sodipodi:role="line"
        id="tspan922"
-       x="373.53119"
+       x="389.67374"
        y="186.27086"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Maven/Gradle plugin</tspan><tspan
        sodipodi:role="line"
-       x="373.53119"
+       x="389.67374"
        y="215.60376"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"
        id="tspan941">(augmentation)</tspan></text>
@@ -786,5 +759,37 @@
        y="171.11111"
        x="591.11108"
        id="tspan3463"
-       sodipodi:role="line"></tspan></text>
+       sodipodi:role="line" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e76f00;fill-opacity:1;stroke:none;stroke-width:1.03529;stroke-linecap:square;stroke-miterlimit:10"
+     x="377.13614"
+     y="318.09909"
+     id="text901-2"
+     transform="scale(1.0352867,0.96591601)"><tspan
+       sodipodi:role="line"
+       id="tspan1341-6"
+       x="377.13614"
+       y="318.09909"
+       style="font-size:26.6667px">Application</tspan><tspan
+       sodipodi:role="line"
+       x="377.13614"
+       y="351.43246"
+       id="tspan939-4"
+       style="font-size:26.6667px">bytecode</tspan><tspan
+       sodipodi:role="line"
+       x="377.13614"
+       y="384.76584"
+       style="font-size:26.6667px"
+       id="tspan1559">+</tspan><tspan
+       sodipodi:role="line"
+       x="377.13614"
+       y="418.09921"
+       style="font-size:26.6667px"
+       id="tspan1561">generated</tspan><tspan
+       sodipodi:role="line"
+       x="377.13614"
+       y="451.43259"
+       style="font-size:26.6667px"
+       id="tspan1563">bytecode</tspan></text>
 </svg>

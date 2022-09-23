@@ -26,7 +26,7 @@
                 <img src="images/" alt="" style="position: absolute;bottom: 0;">
             </div> -->
             <div id="footer" class="footer">
-                <img src="css/theme/camel-assets/images/camel.svg" class="left"><a href="https://twitter.com/zinebbendhiba">@ZinebBendhiba</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/ppalaga">@ppalaga</a><img src="images/quarkus-logo.svg" class="right">
+                <img src="css/theme/camel-assets/images/camel.svg" class="left"><a href="https://twitter.com/ppalaga">@ppalaga</a><img src="images/quarkus-logo.svg" class="right">
             </div>
             <div class="slides">
                 <section id="intro">
@@ -42,30 +42,24 @@
                         <h3>Quarkus, Knative and Kafka</h4>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <p style="width: 95%; text-align: right; font-size: 24px; color: #d8a03f; ">
-                            Zineb Bendhiba<br>
-                            <a href="https://twitter.com/zinebbendhiba" style="font-size: 18px; color:#83b6d9 ">@ZinebBendhiba</a>
-                        </p>
-                        <p style="width: 95%; text-align: right; font-size: 24px; color: #d8a03f; ">
+                        <p style="width: 95%; text-align: right; font-size: 32px; color: #d8a03f; ">
                             Peter Palaga<br>
-                            <a href="https://twitter.com/ppalaga" style="font-size: 18px; color:#83b6d9 ">@ppalaga</a>
+                            <a href="https://twitter.com/ppalaga" style="font-size: 24px; color:#83b6d9 ">@ppalaga</a>
                         </p>
                         <p style="width: 20%; text-align: left; font-size: 24px; color: #aaaaaa; ">
-                        <br>
-                            <img src="images/camel_quarkus_bot_qr.svg" style="height: 2.5em; float: left; margin-right: 15px;">Please join<br>our Telegram bot
-                        </p>
                         <p style="width: 95%; text-align: right; font-size: 24px; color: #aaaaaa; ">
                             <small style="font-size: 0.3em;">Image from <a href="https://www.1zoom.me/en/wallpaper/461244/z9357.7/" style="color:#83b6d9 " target="_blank">1zoom.me</a></small>
                         </p>
 
                     </section>
-                    <section id="about-us">
-                        <p><small>Zineb&nbsp;&nbsp;&&nbsp;&nbsp;Peter</small></p>
+                    <section id="about-me">
+                        <p>Peter Palaga</p>
                         <p>&nbsp;</p>
-                        <img src="images/red-hat-integration-logo.svg" style="height: 2em;">
-                        <img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 3em; ">
-                        <img src="images/quarkus-logo.svg" style="height: 1.2em; margin-left: 3em; ">
-                        <p>&nbsp;</p>
+                        <a href="https://access.redhat.com/products/red-hat-integration" target="_blank"><img src="images/red-hat-integration-logo.svg" style="height: 2em;"></a>
+                        <a href="https://camel.apache.org/"><img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 3em; "></a>
+                        <a href="https://quarkus.io"><img src="images/quarkus-logo.svg" style="height: 1.2em; margin-left: 3em; "></a>
+                        <p style="margin-left: 8.5em">↘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↙</p>
+                        <p style="margin-left: 8.5em"><a href="https://camel.apache.org/camel-quarkus/latest/index.html">Camel Quarkus</a></p>
                     </section>
                     <!--<section id="mvnd">
                         <p><code>mvnd</code> - the Maven Daemon</p>
@@ -159,7 +153,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <p style="font-size: 1.5rem">Check <a href="https://camel.apache.org/components/latest/">the full list</a>
+                        <p style="font-size: 1.5rem">Check <a href="https://camel.apache.org/components/latest/" target="_blank">the full list</a>
                     </section>
                     <section id="transform" data-state="no-footer" data-background-image="images/pasta-maker.jpg">
                         <div style="position: absolute; right: 0px; top: 650px">
@@ -213,11 +207,18 @@
                         </div>
                     </section>
                     <section id="supported-platforms">
-                        <p><small>Supported platforms</small></p>
+                        <p><small>Ways to run Camel</small></p>
                         <p><small>&nbsp;</small></p>
                         <table>
                             <tr>
-                                <td colspan="3" style="border-bottom: none; vertical-align: middle; padding-bottom: 30px; text-align: center;"><img src="css/theme/camel-assets/images/camel-circle.svg" style="vertical-align: middle; width: 1.4em; margin-bottom: 8px"> Standalone</td>
+                                <td style="border-bottom: none; vertical-align: middle; padding: 0px 0px 0px 15px; text-align: center" colspan="3">
+                                    <table>
+                                        <tr>
+                                            <td style="border-bottom: none; padding-bottom: 30px; text-align: center; padding-right: 90px; "><img src="css/theme/camel-assets/images/camel-circle.svg" style="vertical-align: middle; width: 1.4em; margin-bottom: 8px"> Standalone</td>
+                                            <td style="border-bottom: none; padding-bottom: 30px; text-align: center; padding-left: 60px; "><img src="images/jbang_logo.svg" style="vertical-align: middle; height: 1.4em; margin-bottom: 8px"></td>
+                                        </tr>
+                                    </table>
+                                </td>
                             </tr>
                             <!-- Add jbang -->
                             <tr>
@@ -284,16 +285,37 @@
                              </tbody>
                         </table>
                     </section>
-                    <!--<section id="devjoy">
-                        <small>Why Quarkus?</small>
-                        <h2>Developer joy</h2>
-                        <ul class="check">
-                            <li class="fragment">Live reload:<br>
-                                <code>mvn compile quarkus:dev</code></li>
-                                <li class="fragment">Isolation from GraalVM CLI/SPI config</li>
-                                <li class="fragment">Rich ecosystem of extensions</li>
+                    <section id="devmode">
+                        <pre style="font-size: 48px; width: 60%"><code class="hljs shell">$ mvn compile quarkus:dev</code></pre>
+                        <p style="font-size: 32px">Quarkus dev mode:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        <ul class="check" style="font-size: 30px;">
+                            <li>Live reload</li>
+                            <li>Dev services (via Testcontainers)
+                                <ul>
+                                    <li>DBs, Kafka, Mock Mailer, ...</li>
+                                </ul>
+                            </li>
+                            <li>Continuous testing</li>
+                            <li><a href="https://quarkus.io/guides/dev-ui">DevUI</a>
+                                <ul>
+                                    <li>Swagger UI, GraphQL UI, Health UI</li>
+                                </ul>
+                            </li>
                         </ul>
-                    </section>-->
+                        <p style="font-size: 24px;"><br><a href="https://quarkus.io/guides/dev-mode-differences#dev-mode-features">https://quarkus.io/guides/dev-mode-differences#dev-mode-features</a></p>
+                    </section>
+                    <section id="devjoy">
+                        <h2>Developer 😍</h2>
+                        <ul class="check">
+                            <li>Isolation from GraalVM CLI/SPI</li>
+                            <li>Rich ecosystem of extensions:
+                                <ul>
+                                    <li>Community: <a href="https://code.quarkus.io/" target="_blank">code.quarkus.io</a></li>
+                                    <li>Red Hat supported: <a href="https://code.quarkus.redhat.com/" target="_blank">code.quarkus.redhat.com</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
                     <section id="camel-quarkus-extensions">
                         <p style="margin-bottom: 0px;"><img src="images/camel-quarkus-extensions.svg"></p>
                         <p style="float: right; font-size: 24px; margin-top: 0px; text-align: left;">
@@ -302,20 +324,14 @@
                         </p>
                     </section>
                     <section id="demo" data-state="no-footer" data-background-image="images/demo.jpg">
-                        <div style="position: absolute; right: 0px; top: 0px; text-align: left; font-size:40px; width: 11em; color: #000;">
-                            <img src="images/camel_quarkus_bot_qr.svg" style="height: 2.5em; float: left; margin-right: 15px;">Please join<br>our&nbsp;Telegram&nbsp;bot
-                        </div>
                         <div style="position: absolute; right: 0px; top: 650px">
                             <small style="font-size: 0.3em;">Image adapted from <a href="https://commons.wikimedia.org/wiki/File:Demo_gegen_Artikel_13.jpg" target="_blank">Wikimedia Commons</a> CC BY 4.0</small>
                         </div>
                     </section>
                     <section id="camel-quarkus-demo">
-                        <div style="position: absolute; right: 0px; top: 0px; text-align: left; font-size:40px; width: 11em; color: #000;">
-                            <img src="images/camel_quarkus_bot_qr.svg" style="height: 2.5em; float: left; margin-right: 15px;">Please join<br>our&nbsp;Telegram&nbsp;bot
-                        </div>
-                        <h4>Camel Quarkus Demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <h4>Camel Quarkus Demo</h4>
                             <p style="margin-top: 50px;"><img alt="Camel Quarkus demo" src="images/camel-quarkus-demo.svg"></p>
-                            <p style="text-align: right; font-size: 28px;"><a href="https://github.com/zbendhiba/telegram-kafka/tree/devoxx-uk-2022">github.com/zbendhiba/telegram-kafka/tree/devoxx-uk-2022</a></p>
+                            <p style="text-align: right; font-size: 28px;"><a href="https://github.com/ppalaga/camel-quarkus-demo/tree/220927-sbb-dev-day" target="_blank">github.com/ppalaga/camel-quarkus-demo/tree/220927-sbb-dev-day</a></p>
 
                         <aside class="notes">
                             Demo script
@@ -323,23 +339,18 @@
                                 <li>Visit <a href="http://code.quarkus.io">code.quarkus.io</a> select extensions</li>
                                 <li>Show how to download, do not download</li>
                                 <li>Switch to a ready IDE</li>
-                                <li>Show the pom.xml file: BOM, extensions, application.properties</li>
+                                <li>Show the `pom.xml` file: BOM, extensions</li>
+                                <li>`application.properties`</li>
                                 <li>Export the secrets</li>
                                 <li>`mvn compile quarkus:dev`</li>
-                                <li>Route1 telegram -> log</li>
-                                <li>Expand Route1 telegram -> transformation('Kafka: ${body}') -> kafka</li>
-                                <li>Create Route2 kafka -> log</li>
-                                <li>Expand Route2 kafka -> transformation('DDB: ${body}') -> ddb</li>
-                                <li>Create Route3 platformhttp -> ddb</li>
+                                <li>Uncomment the snippets in Routes.java</li>
                             </ul>
                             Native mode
                             <ul>
-                                <li>Start compilation via `mvn package -Pnative`</li>
+                                <li>`mvn package -Pnative -Dquarkus.native.container-build`</li>
                                 <li>Do not wait for it to finish, just show the native executable compiled beforehead</li>
                                 <li>Show the size on disk</li>
-                                <li>Maybe a simple app - just telegram -> log so that we do not have to start all the containers?</li>
-                                <li>Start, show the startup time</li>
-                                <li>Send some requests, show RSS</li>
+                                <li>Send some requests, show RSS `ps -o pid,rss,command -p $(pgrep quark)`</li>
                             </ul>
                         </aside>
                     </section>
@@ -380,6 +391,12 @@
                                     <li><code>quarkus-kubernetes-config</code></li>
                                 </ul>
                             </li>
+                            <li><br>Knative/Serverless
+                                <ul class="bullet" style="font-size: 1.5rem;">
+                                    <li><code>quarkus-funqy-http</code></li>
+                                    <li><code>quarkus-funqy-knative-events</code></li>
+                                </ul>
+                            </li>
                         </ul>
                             <p style="font-size: 1.5rem;"><br>Watch
                                 <a target="_blank" href="https://www.youtube.com/watch?v=gyOe-m-kltw">Quarkus Insights #15: Kubernetes and OpenShift with Quarkus</a></p>
@@ -412,7 +429,6 @@
                     <section id="camel-k-demo">
                         <h2>Camel K demo</h2>
                         <p><img alt="Systems integration" src="images/camel-k-demo.svg"></p>
-                        <p style="text-align: right; font-size: 28px;"><a href="https://github.com/zbendhiba/telegram-kafka/tree/devoxx-uk-2022/camel-k">github.com/zbendhiba/telegram-kafka/tree/devoxx-uk-2022/camel-k</a></p>
                         <aside class="notes">
                             <ul>
                                 <li>Prepared already: operators, channel, secrets</li>
@@ -468,18 +484,9 @@
                         Feedback and contributions are welcome!
                     </section>
                     <section id="conference-resources">
-                        <h3>Next steps</h3>
-                        <ol>
-                            <li>Rate <a href="https://www.devoxx.co.uk/talk/?id=4725">this talk</a></li>
-                            <li>More content in Room B:
-                                <ul class="no-bullet" style="font-size: 32px;">
-                                    <li>14:10 Ben Evans: <a href="https://www.devoxx.co.uk/talk/?id=3883">Getting Started with Observability for Java Developers</a></li>
-                                    <li>15:10 Erin Schnabel: <a href="https://www.devoxx.co.uk/talk/?id=10901">Take a walk on the Client Side</a></li>
-                                    <li>16:30 Geoffrey De smet: <a href="https://www.devoxx.co.uk/talk/?id=3853">Artificial Intelligence planning with OptaPlanner</a></li>
-                                    <li>17:30 Ozan Gunalp: <a href="https://www.devoxx.co.uk/talk/?id=11201">Developing a stream processing application with Apache Kafka and Quarkus</a></li>
-                                </ul>
-                            </li>
-                        </ol>
+                        <h3>Camel Quarkus Workshop</h3>
+                        <p>BaselOne, Oct. 20, 2022</p>
+                        <p style="font-size: 24px;"><a href="https://www.baselone.ch/speech.html?id=08CA4481-7EBE-44BF-B88E-5FEA9519FB18" target="_blank">baselone.ch/speech.html?id=08CA4481-7EBE-44BF-B88E-5FEA9519FB18</a></p>
                     </section>
                     <!-- <section>
                         <h2>Apache Camel community</h2>
