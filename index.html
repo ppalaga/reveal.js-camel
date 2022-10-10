@@ -32,29 +32,24 @@
                 <section id="intro">
                     <!--<section id="sponsors" data-background-image="images/BaselOne21.png" data-state="no-footer">
                     </section>-->
-                    <section id="cover" data-state="no-footer">
+                    <section id="cover" data-background-image="images/waiting-for-a-maven-build.jpg" data-state="no-footer">
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <h1>Maven</h1>
-                        <h3>my life is short!</h3>
+                        <h1 style="color: #fff; font-weight: bold; text-align: left; font-size: 80px;">Maven</h1>
+                        <h3 style="color: #fff; font-weight: bold; text-align: left; font-size: 50px;">my life is short!</h3>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <p>Peter Palaga</p>
-                        <p><small><a href="https://twitter.com/ppalaga">@ppalaga</a></small></p>
+                        <p  style="color: #fff; font-weight: bold; text-align: left; font-size: 50px;">Peter Palaga</p>
+                        <p  style="color: #fff; font-weight: bold; text-align: left; font-size: 50px;"><small><a href="https://twitter.com/ppalaga">@ppalaga</a></small></p>
                     </section>
                     <section id="about-me">
-                        <h2>About me</h2>
+                        <p>Peter Palaga</p>
                         <p>&nbsp;</p>
-                        <img src="images/red-hat-integration-logo.svg" style="height: 2em;">
-                        <img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 2em; ">
-                        <aside class="notes">
-                            <p>RH Integration:</p>
-                            <ul>
-                                <li>Fuse</li>
-                                <li>3scale API Management</li>
-                                <li>AMQ</li>
-                            </ul>
-                        </aside>
+                        <a href="https://access.redhat.com/products/red-hat-integration" target="_blank"><img src="images/red-hat-integration-logo.svg" style="height: 2em;"></a>
+                        <a href="https://camel.apache.org/"><img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 3em; "></a>
+                        <a href="https://quarkus.io"><img src="images/quarkus-logo.svg" style="height: 1.2em; margin-left: 3em; "></a>
+                        <p style="margin-left: 8.5em">↘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↙</p>
+                        <p style="margin-left: 8.5em"><a href="https://camel.apache.org/camel-quarkus/latest/index.html">Camel Quarkus</a></p>
                     </section>
                     <section id="projects-i-build-often">
                         <h4>Projects I build often</h4>
@@ -92,20 +87,29 @@
                             <small><sup>2)</sup> <code>mvn clean && find . -type f -name 'pom.xml' | wc -l</code></small>
                         </p>
                     </section>
+                    <!--
                     <section id="wait-for-maven" data-background-image="images/waiting-for-a-maven-build.jpg" data-state="no-footer">
-                        <div style="position: absolute; float: left; margin-left: -100px; margin-top: 0px;">
+                        <div style="position: absolute; float: left; margin-left: 0px; margin-top: 0px;">
                             <h2 style="color: #fff; font-weight: bold; text-align: left; font-size: 80px;">Waiting<br>for<br> a<br> Maven<br> build...</h2>
                             <small style="color: #fff; font-size: 0.3em;">Image from <a href="https://imgflip.com/memetemplate/123293403/Skull-waiting-for-reply">imgflip</a></small>
                         </div>
                     </section>
+                    -->
                     <section id="agenda">
                         <h2>Agenda</h2>
                         <ul>
+                            <li>Maven lifecycle</li>
                             <li>Skipping mojos</li>
                             <li><code>mvnd</code> a.k.a. Maven Daemon</li>
                             <li>Vertical scaling</li>
-                            <li>Incrememental builds with GIB</li>
+                            <li><s>Incrememental builds with GIB</s></li>
                         </ul>
+                    </section>
+                </section>
+                <section id="maven-intro-chapter">
+                    <section id="maven-intro">
+                        <h2>Maven lifecycle</h2>
+                        <img src="images/maven-lifecycle.svg">
                     </section>
                 </section>
                 <section id="skip-mojos">
@@ -121,27 +125,8 @@
                             <li>Tests, and various source checks can be skipped</li>
                         </ul>
                     </section>
-                    <section id="more-candidates-for-skipping-1">
-                        <h3>Find candidates for skipping (1/3)</h3>
-                        <p><code><a href="https://github.com/khmarbaise/maven-buildtime-profiler">maven-buildtime-profiler</a></code></p>
-                        <ul>
-                            <li>A Maven extension</li>
-                            <li>Outputs per-mojo per-module exec. times</li>
-                            <li>Exec. times not summed up per mojo across modules - limited usefulness</li>
-                            <li>An <a href="images/maven-buildtime-profiler-report.txt">example</a></li>
-                        </ul>
-                    </section>
-                    <section id="more-candidates-for-skipping-2">
-                        <h3>Find candidates for skipping (2/3)</h3>
-                        <p><code><a href="https://scans.gradle.com/#maven">Gradle build scans for Maven</a></code></p>
-                        <ul>
-                            <li>A Maven extension</li>
-                            <li>Allows sorting by execution time</li>
-                            <li>An <a href="https://scans.gradle.com/s/yf2ws35ebhq4a/timeline?sort=longest">example</a></li>
-                        </ul>
-                    </section>
                     <section id="more-candidates-for-skipping-3">
-                        <h3>Find candidates for skipping (3/3)</h3>
+                        <h3>Find candidates for skipping</h3>
                         <p><code><a href="https://github.com/jvm-profiling-tools/async-profiler">async-profiler</a></code> or any other Java profiler</p>
                         <ul>
                             <li><code>export MAVEN_OPTS="-agentpath:/path/to/libasyncProfiler.so=start, event=cpu,file=mvn-profile.html"</code></li>
@@ -307,7 +292,7 @@ End of Maven init: 1634117025765</span>
                         <p style="font-size: 1.5rem;"><a href="https://github.com/apache/maven-mvnd" target="_blank">https://github.com/apache/maven-mvnd</a></p>
                         <ul>
                             <li>Started by <a href="https://twitter.com/gnodet">Guillaume Nodet</a> in 2019</li>
-                            <li>24 releases since then</li>
+                            <li>26 releases since then</li>
                             <li>Donated to the ASF Maven Project in December 2021</li>
                         </ul>
                         <p><a href="https://twitter.com/mvndaemon" rel="nofollow"><img src="https://camo.githubusercontent.com/eca91a719d9b5623bbf24a22ddc4ade4170bf95daf20921f561d1140887db9c1/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f75726c2f68747470732f747769747465722e636f6d2f6d766e6461656d6f6e2e7376673f7374796c653d736f6369616c266c6162656c3d466f6c6c6f772532302534306d766e6461656d6f6e" alt="Twitter" data-canonical-src="https://img.shields.io/twitter/url/https/twitter.com/mvndaemon.svg?style=social&amp;label=Follow%20%40mvndaemon" style="max-width:100%;"></a></p>
@@ -352,6 +337,20 @@ End of Maven init: 1634117025765</span>
                                 </td>
                             </tr>
                         </table>
+                    </section>
+                    <section id="mvnd-demo">
+                        <h2><code>mvnd</code> demo</h2>
+                        <pre style="width: 100%; margin: 0px; font-size: 0.4em"><code class="hljs shell" style="max-height: unset;" data-noescape data-trim>$ git clone camel quarkus
+$ cd camel-quarkus
+$ mvnd install -Dquickly
+...
+# Try CTRL B, + and - keystrokes
+# Check mvnd --status and mvnd --help in another terminal
+$ mvnd install -Dquickly
+...
+$ mvnd install -Dquickly
+...
+</code></pre>
                     </section>
                     <section id="mvnd-speed-gains">
                         <h3><code>mvnd</code> speed gains</h3>
@@ -449,8 +448,12 @@ End of Maven init: 1634117025765</span>
                         </ul>
                         <img src="/images/smart-builder-scheduler.png" style="height: 400px;">
                         <aside class="notes">
-The standard multi-threaded scheduler is using a rather naive and simple approach of using dependency-depth information in the project. It builds everything at a given dependency-depth before continuing to the next level.
-The Takari Smart Builder is using a more advanced approach of dependency-path information. Projects are aggressively built along a dependency-path in topological order as upstream dependencies have been satisfied.
+The standard multi-threaded scheduler is using a rather
+naive and simple approach of using dependency-depth information in the project.
+It builds everything at a given dependency-depth before continuing to the next level.
+The Takari Smart Builder is using a more advanced approach of dependency-path information.
+Modules are aggressively built along a dependency-path in topological order as soon as their
+dependencies are satisfied.
                         </aside>
                     </section>
                     <section id="hidden-deps">
@@ -478,7 +481,7 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
                     </section>
                     <section id="make-hidden-deps-explicit">
                         <h3>Make hidden dependencies explicit</h3>
-<pre style="width: 100%; margin: 0px; font-size: 0.4em"><code class="hljs xml" style="max-height: unset;"><dependency>                                    <!-- Add this in C -->
+<pre style="width: 100%; margin: 0px; font-size: 0.4em"><code class="hljs xml" style="max-height: unset;"><dependency>                                    &lt;!-- Add this in C --&gt;
     <groupId>org.my-group</groupId>
     <artifactId>B</artifactId>
     <version>${project.version}</version>
@@ -493,6 +496,7 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
 </dependency></code></pre>
 <p>This won't add any real dependency to <code>C</code> but it will guarantee that <code>B</code> is fully built before <code>C</code></p>
                     </section>
+                    <!--
                     <section id="concurrent-local-repo">
                         <small>Issues of parallel builds</small>
                         <h2>Local repository access</h2>
@@ -501,6 +505,7 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
                             <li>Solved in <code>mvnd</code> 0.7.1</li>
                         </ul>
                     </section>
+                    -->
                     <section id="broken-plugins">
                         <small>Issues of parallel builds</small>
                         <h2>Broken plugins</h2>
@@ -516,220 +521,9 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
                         <h2><code>mvnd</code> drawbacks</h2>
                         <ul class="fragment" style="font-size: 30px;">
                             <li>Blocks a few gigs of RAM (configurable)</li>
-                            <li>Better not on the CI</li>
+                            <li>First official build (<a href="https://github.com/apache/maven-mvnd/releases/tag/untagged-f096b959a08cb08c4c76">0.8.2</a>) for Apple M1 these days</li>
                             <li>Windows issues and testing catching up gradualy</li>
-                            <li>Class loader caching may have issues in some situations</li>
                         </ul>
-                    </section>
-                    <section id="mvnd-help">
-                        <h3><code>mvnd --help</code></h3>
-                        <pre style="width: 100%; margin: 0px; font-size: 0.4em"><code class="hljs shell" style="max-height: 500px;">$ mvnd --help
-
-usage: mvnd [options] [&lt;goal(s)>] [&lt;phase(s)>]
-
-Options:
- -am,--also-make                        If project list is specified, also build projects
-                                        required by the list
- -amd,--also-make-dependents            If project list is specified, also build projects
-                                        that depend on projects on the list
- -B,--batch-mode                        Run in non-interactive (batch) mode (disables output
-                                        color)
- -b,--builder &lt;arg>                     The id of the build strategy to use
- -C,--strict-checksums                  Fail the build if checksums don't match
- -c,--lax-checksums                     Warn if checksums don't match
-    --color &lt;arg>                       Defines the color mode of the output. Supported are
-                                        'auto', 'always', 'never'.
- -cpu,--check-plugin-updates            Ineffective, only kept for backward compatibility
- -D,--define &lt;arg>                      Define a system property
- -e,--errors                            Produce execution error messages
- -emp,--encrypt-master-password &lt;arg>   Encrypt master security password
- -ep,--encrypt-password &lt;arg>           Encrypt server password
- -f,--file &lt;arg>                        Force the use of an alternate POM file (or directory
-                                        with pom.xml)
- -fae,--fail-at-end                     Only fail the build afterwards; allow all
-                                        non-impacted builds to continue
- -ff,--fail-fast                        Stop at first failure in reactorized builds
- -fn,--fail-never                       NEVER fail the build, regardless of project result
- -gs,--global-settings &lt;arg>            Alternate path for the global settings file
- -gt,--global-toolchains &lt;arg>          Alternate path for the global toolchains file
- -h,--help                              Display help information
- -l,--log-file &lt;arg>                    Log file where all build output will go (disables
-                                        output color)
- -llr,--legacy-local-repository         Use Maven 2 Legacy Local Repository behaviour, ie no
-                                        use of _remote.repositories. Can also be activated
-                                        by using -Dmaven.legacyLocalRepo=true
- -N,--non-recursive                     Do not recurse into sub-projects
- -npr,--no-plugin-registry              Ineffective, only kept for backward compatibility
- -npu,--no-plugin-updates               Ineffective, only kept for backward compatibility
- -nsu,--no-snapshot-updates             Suppress SNAPSHOT updates
- -ntp,--no-transfer-progress            Do not display transfer progress when downloading or
-                                        uploading
- -o,--offline                           Work offline
- -P,--activate-profiles &lt;arg>           Comma-delimited list of profiles to activate
- -pl,--projects &lt;arg>                   Comma-delimited list of specified reactor projects
-                                        to build instead of all projects. A project can be
-                                        specified by [groupId]:artifactId or by its relative
-                                        path
- -q,--quiet                             Quiet output - only show errors
- -r,--resume                            Resume reactor from the last failed project, using
-                                        the resume.properties file in the build directory
-    --raw-streams                       Do not decorate output and error streams
- -rf,--resume-from &lt;arg>                Resume reactor from specified project
- -s,--settings &lt;arg>                    Alternate path for the user settings file
- -t,--toolchains &lt;arg>                  Alternate path for the user toolchains file
- -T,--threads &lt;arg>                     Thread count, for instance 2.0C where C is core
-                                        multiplied
- -U,--update-snapshots                  Forces a check for missing releases and updated
-                                        snapshots on remote repositories
- -up,--update-plugins                   Ineffective, only kept for backward compatibility
- -v,--version                           Display version information
- -V,--show-version                      Display version information WITHOUT stopping build
- -X,--debug                             Produce execution debug output
-
-mvnd specific options:
- --completion &lt;string>                  Print the completion for the given shell to stdout.
-                                        Only --completion bash is supported at this time.
- --purge                                Delete log files under the mvnd.registry directory
-                                        that are older than mvnd.logPurgePeriod
- --status                               Prints the status of daemon instances registered in
-                                        the registry specified by mvnd.registry
- --stop                                 Stop all daemon instances registered in the
-                                        registry specified by mvnd.registry
- -Djava.home=&lt;path>                     Java home for starting the daemon
-                                        Env. variable: JAVA_HOME
- -Djdk.java.options=&lt;string>            The JDK_JAVA_OPTIONS option
-                                        Default:
-                                        Env. variable: JDK_JAVA_OPTIONS
- -Dmaven.multiModuleProjectDirectory=&lt;path> The root directory of the current multi module
-                                        Maven project
- -Dmaven.repo.local=&lt;path>              The path to the Maven local repository
- -Dmaven.settings=&lt;path>;-s,--settings &lt;path> The location of the maven settings file
- -Dmvnd.buildTime=&lt;boolean>             Log mojos execution time at the end of the build.
- -Dmvnd.builder=&lt;string>;-b,--builder &lt;string> The builder implementation the daemon should
-                                        use
-                                        Default: smart
- -Dmvnd.daemonStorage=&lt;path>            The directory under which the daemon stores its
-                                        registry, log files, etc. Default:
-                                        ${user.home}/.m2/mvnd
- -Dmvnd.debug=&lt;boolean>                 If true, the daemon will be launched in debug mode
-                                        with the following JVM argument:
-                                        -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000;
-                                        otherwise the debug argument is not passed to the
-                                        daemon.
-                                        Default: false
- -Dmvnd.duplicateDaemonGracePeriod=&lt;duration> Period after which idle duplicate daemons
-                                        will be shut down. Duplicate daemons are daemons
-                                        with the same set of discriminating start
-                                        parameters.
-                                        Default: 10 seconds
- -Dmvnd.enableAssertions=&lt;boolean>      If true, the -ea option will be passed to the
-                                        daemon; otherwise the -ea option is not passed to
-                                        the daemon.
-                                        Default: false
- -Dmvnd.expirationCheckDelay=&lt;duration> The daemon will check this often whether it should
-                                        exit.
-                                        Default: 10 seconds
- -Dmvnd.home=&lt;path>                     The daemon installation directory. The client
-                                        normally sets this according to where its mvnd
-                                        executable is located
-                                        Env. variable: MVND_HOME
- -Dmvnd.idleTimeout=&lt;duration>          A time period after which an unused daemon will
-                                        terminate by itself.
-                                        Default: 3 hours
- -Dmvnd.jvmArgs=&lt;string>                Additional JVM args to pass to the daemon
- -Dmvnd.keepAlive=&lt;duration>            If the daemon does not send any message to the
-                                        client in this period of time, send a keep-alive
-                                        message so that the client knows that the daemon
-                                        is still alive.
-                                        Default: 100 ms
- -Dmvnd.logPurgePeriod=&lt;duration>       Daemon log files older than this value will be
-                                        removed automatically.
-                                        Default: 7 days
- -Dmvnd.logback=&lt;path>                  The location of the Logback configuration file the
-                                        daemon should use to configure its logging.
- -Dmvnd.maxHeapSize=&lt;memory_size>       The -Xmx value to pass to the daemon
-                                        Default: 2G
- -Dmvnd.maxLostKeepAlive=&lt;integer>      The maximum number of keep alive messages that can
-                                        be missed by the client before the client
-                                        considers the daemon to be dead.
-                                        Default: 30
- -Dmvnd.minHeapSize=&lt;memory_size>       The -Xms value to pass to the daemon
-                                        Default: 128M
- -Dmvnd.minThreads=&lt;integer>            The minimum number of threads to use when
-                                        constructing the default -T parameter for the
-                                        daemon. This value is ignored if the user passes
-                                        -T, --threads or -Dmvnd.threads on the command
-                                        line or if he sets mvnd.threads in
-                                        ~/.m2/mvnd.properties.
-                                        Default: 1
- -Dmvnd.noBuffering=&lt;boolean>           If true the log messages are displayed continuously
-                                        like with stock Maven; otherwise buffer the
-                                        messages and output at the end of the build,
-                                        grouped by module. Passing -B or --batch-mode on
-                                        the command line enables this too for the given
-                                        build.
-                                        Default: false
- -Dmvnd.noDaemon=&lt;boolean>              If true, the client and daemon will run in the same
-                                        JVM that exits when the build is finished;
-                                        otherwise the client starts/connects to a long
-                                        living daemon process. This option is only
-                                        available with non-native clients and is useful
-                                        mostly for debugging.
-                                        Default: false
-                                        Env. variable: MVND_NO_DAEMON
- -Dmvnd.pluginRealmEvictPattern=&lt;string> Regexp pattern that will force eviction of the
-                                        plugin realms if one of its dependencies matches.
-                                        Default:
- -Dmvnd.propertiesPath=&lt;path>           The location of the user supplied mvnd.properties
-                                        file.
-                                        Env. variable: MVND_PROPERTIES_PATH
- -Dmvnd.registry=&lt;path>                 The path to the daemon registry. Default:
-                                        ${mvnd.daemonStorage}/registry.bin
- -Dmvnd.rollingWindowSize=&lt;integer>     The number of log lines to display for each Maven
-                                        module that is built in parallel. The value can be
-                                        increased or decreased by pressing + or - key
-                                        during the build respectively. This option has no
-                                        effect with -Dmvnd.noBuffering=true, -B or
-                                        --batch-mode.
-                                        Default: 0
- -Dmvnd.serial;-1,--serial              Use one thread, no log buffering and the default
-                                        project builder to behave like a standard maven
-                                        Default: false
- -Dmvnd.socketFamily=&lt;string>           Socket family to use
-                                        Default: inet
- -Dmvnd.syncContextFactory=&lt;boolean>    The SyncContextFactory to use (can be either 'noop'
-                                        or 'ipc' for a server-wide factory).
-                                        Default: noop
- -Dmvnd.threads=&lt;string>;-T,--threads &lt;string> The number of threads to pass to the daemon;
-                                        same syntax as Maven's -T/--threads option.
- -Dstyle.color=&lt;string>;--color &lt;string> Whether the output should be styled using ANSI
-                                        color codes; possible values: auto, always, never
-                                        Default: auto
- -Duser.dir=&lt;path>                      The current working directory
- -Duser.home=&lt;path>                     The user home directory
-
-mvnd value types:
- boolean                                true or false; empty string is also interpreted as
-                                        true - so -Dmvnd.noBuffering is equivalent to
-                                        -Dmvnd.noBuffering=true
- duration                               An unlabeled whole number of milliseconds or a
-                                        whole number followed by an optional space and a
-                                        unit which may be one of the following (in EBNF
-                                        notation): d[ay[s]], h[our[s]], m[in[ute[s]]],
-                                        s[ec[ond[s]]] or m[illi]s[ec[ond[s]]]. Examples: 7
-                                        days, 7days, 7d, 100 milliseconds, 100 millis,
-                                        100ms, 100
- integer                                A whole number
- memory_size                            An amount of memory as accepted by the -Xm* family
-                                        of HotSpot JVM options. Examples: 1024m, 2g, 5G
- path                                   A local file system path
- string                                 A string
-</code></pre>
-                    </section>
-                    <section id="mvnd-ui">
-                        <h2><code>mvnd</code> UI</h2>
-                        <p><code>+/-</code> - reveal/hide rolling log lines for the individual builder threads</p>
-                        <p><code>CTRL+B</code> - toggle between threaded and rolling views</p>
                     </section>
                 </section>
                 <section id="vertical-scaling">
@@ -779,7 +573,7 @@ mvnd value types:
                         <img class="fragment" alt="Can we do better?" src="images/costs.png" style="float: left; position: absolute; bottom: -100px;margin-left: 100px; z-index: 20">
                     </section>
                     <section id="vertical-scaling-costs">
-                        <h3>Costs of vertical scaling</h3>
+                        <h3>Costs laptop vs. desktop</h3>
                         <table class="plaintable" style="font-size: 25px;">
                             <tr>
                                 <td>Machine</td>
@@ -818,15 +612,18 @@ mvnd value types:
                                 <td>0.21 KWh*</td>
                             </tr>
                             <tr class="fragment" data-fragment-index="3">
-                                <td>€/year (0.3 €/kWh)</td>
-                                <td>23 €</td>
+                                <td>€/year (0.64 €/kWh**)</td>
+                                <td>49 €</td>
                                 <td></td>
-                                <td>80 €</td>
+                                <td>171 €</td>
                             </tr>
                         </table>
-                        <p class="fragment" data-fragment-index="2" style="font-size: 20px;"><br>*) Measured with a budget power meter from a hobby market</p>
+                        <p class="fragment" data-fragment-index="2" style="font-size: 20px;"><br>*) Measured with a budget power meter from a hobby market
+                            <br>**) <a href="https://www.energyprice.be/blog/electricity-price-belgium/#electricity-flanders-wallonia">ENGIE single rate</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
                     </section>
                 </section>
+                <!--
                 <section id="gib">
                     <section id="gib-1">
                         <p>Incremental builds with</p>
@@ -858,6 +655,7 @@ mvnd value types:
                         <p style="font-size: 30px;">Compare the number of tests and execution times per <a href="https://github.com/quarkusio/quarkus/actions/workflows/ci-actions-incremental.yml">pull request</a></p>
                     </section>
                 </section>
+                -->
                 <section id="wrap-up">
                     <section id="wrap-up-1">
                         <h2>Wrap up</h2>
@@ -865,8 +663,8 @@ mvnd value types:
                         <ul class="check">
                             <li>Skip unessential mojos</li>
                             <li>Maven daemon to keep the building JVM warm</li>
-                            <li>Larger machine</li>
-                            <li>Incremental builds with GIB</li>
+                            <li>More CPU cores & RAM</li>
+                            <!--<li>Incremental builds with GIB</li>-->
                         </ul>
                     </section>
                     <section id="links">
@@ -889,6 +687,8 @@ mvnd value types:
             // - https://github.com/hakimel/reveal.js#configuration
             // - https://github.com/hakimel/reveal.js#dependencies
             Reveal.initialize({
+                width: 1280,
+                height: 720,
                 progress: true,
                 history: true,
                 controls: false,
