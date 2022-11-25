@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>Apache Camel integrations in the age of Quarkus, Knative and Kafka</title>
+        <title>Apache Camel at Quarkus Insights</title>
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/camel.css">
@@ -26,7 +26,7 @@
                 <img src="images/" alt="" style="position: absolute;bottom: 0;">
             </div> -->
             <div id="footer" class="footer">
-                <img src="css/theme/camel-assets/images/camel.svg" class="left"><a href="https://twitter.com/ppalaga">@ppalaga</a><img src="images/quarkus-logo.svg" class="right">
+                <img src="css/theme/camel-assets/images/camel.svg" class="left"><a href="https://twitter.com/davsclaus">@davsclaus@twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://mastodon.social/@zbendhiba">@zbendhiba@mastodon.social</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://mastodon.social/@ppalaga">@ppalaga@mastodon.social</a><img src="images/quarkus-logo.svg" class="right">
             </div>
             <div class="slides">
                 <section id="intro">
@@ -35,16 +35,23 @@
                         <p><a href="https://peter.palaga.org/presentations/210317-camel/index.html#/">https://peter.palaga.org/presentations/210317-camel/index.html#/</a></p>
                     </section>-->
                     <section data-state="no-footer" id="cover" data-background-image="images/Desert_Camels_Silhouette_461244.jpg">
-                        <!--<img data-src="css/theme/camel-assets/images/camel.svg" alt="Apache Camel K" class="plain" style="width: 8em">
-                        <br><br>-->
-                        <h2>Integrating systems</h2>
-                        <h4 style="font-size: 28px">in the age of</h4>
-                        <h3>Quarkus, Knative and Kafka</h4>
+                        <img data-src="css/theme/camel-assets/images/camel.svg" alt="Apache Camel" class="plain" style="width: 9em">
+                        <br><br>
+                        <h5>at</h5>
+                        <h4>Quarkus Insights</h5>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <p style="width: 95%; text-align: right; font-size: 32px; color: #d8a03f; ">
+                        <p style="width: 95%; text-align: right; font-size: 24px; color: #d8a03f; ">
+                            Claus Ibsen<br>
+                            <a href="https://twitter.com/davsclaus" style="font-size: 18px; color:#83b6d9 ">@davsclaus@twitter</a>
+                        </p>
+                        <p style="width: 95%; text-align: right; font-size: 24px; color: #d8a03f; ">
+                            Zineb Bendhiba<br>
+                            <a href="https://mastodon.social/@zbendhiba" style="font-size: 18px; color:#83b6d9 ">@zbendhiba@mastodon.social</a>
+                        </p>
+                        <p style="width: 95%; text-align: right; font-size: 24px; color: #d8a03f; ">
                             Peter Palaga<br>
-                            <a href="https://twitter.com/ppalaga" style="font-size: 24px; color:#83b6d9 ">@ppalaga</a>
+                            <a href="https://mastodon.social/@ppalaga" style="font-size: 18px; color:#83b6d9 ">@ppalaga@mastodon.social</a>
                         </p>
                         <p style="width: 20%; text-align: left; font-size: 24px; color: #aaaaaa; ">
                         <p style="width: 95%; text-align: right; font-size: 24px; color: #aaaaaa; ">
@@ -52,44 +59,15 @@
                         </p>
 
                     </section>
-                    <section id="about-me">
-                        <p>Peter Palaga</p>
-                        <p>&nbsp;</p>
-                        <a href="https://access.redhat.com/products/red-hat-integration" target="_blank"><img src="images/red-hat-integration-logo.svg" style="height: 2em;"></a>
-                        <a href="https://camel.apache.org/"><img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 3em; "></a>
-                        <a href="https://quarkus.io"><img src="images/quarkus-logo.svg" style="height: 1.2em; margin-left: 3em; "></a>
-                        <p style="margin-left: 8.5em">↘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↙</p>
-                        <p style="margin-left: 8.5em"><a href="https://camel.apache.org/camel-quarkus/latest/index.html">Camel Quarkus</a></p>
-                    </section>
-                    <!--<section id="mvnd">
-                        <p><code>mvnd</code> - the Maven Daemon</p>
-                        <img src="images/mvnd-0.4.2.gif">
-                        <p style="font-size: 1.5rem;"><a href="https://github.com/mvndaemon/mvnd" target="_blank">https://github.com/mvndaemon/mvnd</a></p>
-                        <p><a href="https://twitter.com/mvndaemon" rel="nofollow"><img src="https://camo.githubusercontent.com/eca91a719d9b5623bbf24a22ddc4ade4170bf95daf20921f561d1140887db9c1/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f75726c2f68747470732f747769747465722e636f6d2f6d766e6461656d6f6e2e7376673f7374796c653d736f6369616c266c6162656c3d466f6c6c6f772532302534306d766e6461656d6f6e" alt="Twitter" data-canonical-src="https://img.shields.io/twitter/url/https/twitter.com/mvndaemon.svg?style=social&amp;label=Follow%20%40mvndaemon" style="max-width:100%;"></a></p>
-                    </section>-->
-                    <section id="the-integration-problem" data-state="no-footer" data-background-image="images/incompatible-plugs.jpg">
-                        <div style="position: absolute; right: -0em; bottom: -15em;">
-                            <small style="font-size: 0.3em;">Image by <a href="https://www.flickr.com/photos/kaptainkobold/3203311346/in/photostream/" target="_blank">Kaptain Kobold</a> CC BY-NC-SA 2.0</small>
-                        </div>
-                        <!-- TODO: You, System A, System B -->
-                    </section>
-                    <section id="apache-camel" data-state="no-footer" data-background-image="images/smilling-camel.jpg">
-                        <div style="position: absolute; float: left; margin-left: -0px; margin-top: 450px;">
-                            <p><img src="css/theme/camel-assets/images/camel.svg" style="height: 3em; margin-left: 20px"></p>
-                            <!--<p style="font-size: 1.5em; font-weight: bold; margin-bottom: 5px">Apache Camel</p>
-                            <p style="font-size: 0.7em; margin-top: 0px"><a href="http://camel.apache.org/">http://camel.apache.org/</a></p>-->
-                            <small style="font-size: 0.3em;">Image by <a href="https://www.flickr.com/photos/lanzen/5984113332" target="_blank">Anders Lanzen</a> CC BY-NC-SA 2.0</small>
-                        </div>
-                    </section>
-                    <!--<section id="agenda">
+                    <section id="agenda">
                         <h2>Agenda</h2>
                         <ul>
-                            <li>Apache Camel intro</li>
-                            <li>Camel on Quarkus</li>
-                            <li>Camel on Knative/Kubernetes</li>
-                            <li>Camel on Kafka Connect</li>
+                            <li>Apache Camel intro (Peter)</li>
+                            <li>Camel Jbang demo (Claus)</li>
+                            <li>Camel Quarkus (Peter)</li>
+                            <li>Camel Quarkus demo (Zineb)</li>
                         </ul>
-                    </section>-->
+                    </section>
                 </section>
                 <section id="what-is-apache-camel">
                     <section id="camel-overview">
@@ -234,11 +212,21 @@
                         </table>
                     </section>
                 </section>
+                <section id="jbang">
+                    <section id="apache-camel-on-jbang" data-state="no-footer" data-background-image="images/smilling-camel.jpg">
+                        <div style="position: absolute; float: left; margin-left: -0px; margin-top: 450px;">
+                            <p><img src="css/theme/camel-assets/images/camel.svg" style="height: 1.5em; margin-left: 20px; margin-bottom: 10px"> <img src="images/jbang_logo.svg" style="height: 1.5em; margin-left: 20px"></p>
+                            <!--<p style="font-size: 1.5em; font-weight: bold; margin-bottom: 5px">Apache Camel</p>
+                            <p style="font-size: 0.7em; margin-top: 0px"><a href="http://camel.apache.org/">http://camel.apache.org/</a></p>-->
+                            <small style="font-size: 0.3em;">Image by <a href="https://www.flickr.com/photos/lanzen/5984113332" target="_blank">Anders Lanzen</a> CC BY-NC-SA 2.0</small>
+                        </div>
+                    </section>
+                </section>
                 <section id="quarkus">
                     <section id="camel-quarkus-cover" data-state="no-footer" data-background-image="images/cq-camel-animal.jpg">
                         <div style="position: absolute; right: 0px; top: -300px">
                             <small style="font-size: 0.3em;">Image from <a href="https://pxhere.com/en/photo/969761" target="_blank">pxhere.com</a> CC0 Public Domain</small>
-                            <p style="font-size: 1.5em; font-weight: bold;">Camel on Quarkus</p>
+                            <p><img src="css/theme/camel-assets/images/camel.svg" style="height: 1.5em; margin-right: 20px"> <img src="images/quarkus-logo.svg" style="height: 1em; margin-right: 20px; margin-bottom: 0px"></p>
                         </div>
                     </section>
                     <section id="quarkus-build-time-toolkit">
@@ -370,103 +358,6 @@
                         </ul>
                     </section>-->
                 </section>
-                <section id="deploying-on-kubernetes">
-                    <section id="clouds" data-state="no-footer" data-background-image="images/sea-coast-horizon-cloud-sky-sunlight-941614-pxhere.com.jpg">
-                        <h1>How can we deploy on Kubernetes?</h1>
-                        <div style="position: absolute; right: 0px; top: 650px">
-                            <small style="font-size: 0.3em;">Image by <a href="https://pxhere.com/en/photo/941614" target="_blank">???</a> ???</small>
-                        </div>
-                    </section>
-                    <section id="deploy-the-quarkus-way">
-                        <h1>The Quarkus way</h1>
-
-                        <ul class="no-bullet">
-                            <li>Build and push an image
-                                <ul class="bullet" style="font-size: 1.5rem;">
-                                    <li><code>quarkus-container-image-jib</code></li>
-                                    <li><code>quarkus-container-image-docker</code></li>
-                                    <li><code>quarkus-container-image-s2i</code></li>
-                                </ul>
-                            </li>
-                            <li><br>Generate Kubernetes resources
-                                <ul class="bullet" style="font-size: 1.5rem;">
-                                    <li><code>quarkus-kubernetes</code></li>
-                                    <li><code>quarkus-minikube</code></li>
-                                    <li><code>quarkus-openshift</code></li>
-                                    <li><code>quarkus-kubernetes-config</code></li>
-                                </ul>
-                            </li>
-                            <li><br>Knative/Serverless
-                                <ul class="bullet" style="font-size: 1.5rem;">
-                                    <li><code>quarkus-funqy-http</code></li>
-                                    <li><code>quarkus-funqy-knative-events</code></li>
-                                </ul>
-                            </li>
-                        </ul>
-                            <p style="font-size: 1.5rem;"><br>Watch
-                                <a target="_blank" href="https://www.youtube.com/watch?v=gyOe-m-kltw">Quarkus Insights #15: Kubernetes and OpenShift with Quarkus</a></p>
-                    </section>
-                </section>
-                <!--
-                    Luca: https://developers.redhat.com/topics/camel-k
-                    * Camel K operator smart enough to create kube resources needed to run the integration,
-                      such as ingess of it is a from(HTTP*) route
-                    * Scale to 0 when none of the components needs a persistent connection
-                -->
-                <section id="camel-k">
-                    <section id="simpler" data-state="no-footer" data-background-image="images/smilling-camel.jpg">
-                        <div style="position: absolute; left: 20px; top: 500px">
-                            <p style="font-size: 1.8em; font-weight: bold; margin-bottom: 0px;">Make it simpler!</p>
-                            <p style="margin-top: 0px; font-size: 0.3em;">Image by <a href="https://www.flickr.com/photos/lanzen/5984113332" target="_blank">Anders Lanzen</a> CC BY-NC-SA 2.0</p>
-                        </div>
-                    </section>
-                    <section id="camel-k-dev-process">
-                        <h4>Camel K overview</h4>
-                        <img src="images/camel-k-process-1.svg" style="height: 7.0em; margin-left: -1em;">
-                        <img src="images/camel-k-process-2.svg" style="height: 6.1em; margin-left: 1em; margin-right: 0em; margin-bottom: 1em;">
-                        <img src="images/camel-k-process-3.svg" style="height: 7.0em; margin-left: -1em; margin-bottom: 4em;">
-                    </section>
-                    <section id="operator" data-state="no-footer" data-background-image="images/operator.jpg">
-                        <div style="position: absolute; left: 50px; top: 450px">
-                            <small style="font-size: 0.3em;">Image by <a href="http://www.publicdomainfiles.com/show_file.php?id=13522170015596" target="_blank">CDC</a> Public Domain</small>
-                        </div>
-                    </section>
-                    <section id="camel-k-demo">
-                        <h2>Camel K demo</h2>
-                        <p><img alt="Systems integration" src="images/camel-k-demo.svg"></p>
-                        <aside class="notes">
-                            <ul>
-                                <li>Prepared already: operators, channel, secrets</li>
-                                <li>kamel run</li>
-                                <li>kamel run --dev</li>
-                                <li>Inspect the routes</li>
-                                <li>Open the spreadsheet</li>
-                                <li>See some messages coming</li>
-                                <li>Shut down the first integration</li>
-                                <li>See scale to 0 later</li>
-                            </ul>
-                        </aside>
-                    </section>
-                    <!--<section id="how-camel-k-works">
-                        <h4>How Camel K works</h4>
-                        <img alt="Camel K internals" src="images/camel-k-internals.svg">
-                        <aside class="notes">
-                            <code>kamel</code> client creates an `integration` resource in the cluster
-                            The operator is notified
-                            * figures out how to deploy the `integartion`
-                            * `Resolver` looks into the route definition
-                            *
-                            ** Either takes an available Image (buildless deploy)
-                            ** Or builds a new image
-                            * The route definition itself is not a part of the image
-                            ** Mounted to the container as a ConfigMap
-
-                            Same image for multiple routes that use the same set of components and deps
-                            Route edits that do not change the set can be redeployed quickly
-                            ~4 seconds for the simplest routes
-                        </aside>
-                    </section>-->
-                </section>
                 <section id="end">
                     <section id="wrap-up">
                         <h2>Wrap up</h2>
@@ -487,20 +378,6 @@
                         </ul>
                         <br><br>
                         Feedback and contributions are welcome!
-                    </section>
-                    <section id="conference-resources">
-                        <h3>Next steps</h3>
-                        <ol>
-                            <li>Rate <a href="https://www.devoxx.co.uk/talk/?id=4725">this talk</a></li>
-                            <li>More content in Room B:
-                                <ul class="no-bullet" style="font-size: 32px;">
-                                    <li>14:10 Ben Evans: <a href="https://www.devoxx.co.uk/talk/?id=3883">Getting Started with Observability for Java Developers</a></li>
-                                    <li>15:10 Erin Schnabel: <a href="https://www.devoxx.co.uk/talk/?id=10901">Take a walk on the Client Side</a></li>
-                                    <li>16:30 Geoffrey De smet: <a href="https://www.devoxx.co.uk/talk/?id=3853">Artificial Intelligence planning with OptaPlanner</a></li>
-                                    <li>17:30 Ozan Gunalp: <a href="https://www.devoxx.co.uk/talk/?id=11201">Developing a stream processing application with Apache Kafka and Quarkus</a></li>
-                                </ul>
-                            </li>
-                        </ol>
                     </section>
                     <!-- <section>
                         <h2>Apache Camel community</h2>
