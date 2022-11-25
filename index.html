@@ -229,53 +229,16 @@
                             <p><img src="css/theme/camel-assets/images/camel.svg" style="height: 1.5em; margin-right: 20px"> <img src="images/quarkus-logo.svg" style="height: 1em; margin-right: 20px; margin-bottom: 0px"></p>
                         </div>
                     </section>
-                    <section id="quarkus-build-time-toolkit">
-                        <div style="position: absolute; left: 0px; top: 60px">
-                            <img src="images/quarkus-logo.svg" style="width: 250px">
-                            <p style="font-size: 0.5em; margin-top: 0px;">a build time toolkit</p>
-                        </div>
-                        <img alt="" src="images/quarkus-workflow.svg">
+                    <section id="camel-quarkus-extensions">
+                        <p style="margin-bottom: 0px;"><img src="images/camel-quarkus-extensions.svg"></p>
+                        <p style="float: right; font-size: 24px; margin-top: 0px; text-align: left;">
+                            <a href="https://code.quarkus.io/?extension-search=origin:platform%20camel" target="_blank">code.quarkus.io</a> (with native support)<br>
+                            <a href="https://camel.apache.org/camel-quarkus/latest/reference/index.html" target="_blank">Camel Quarkus Docs</a> (all)
+                        </p>
                     </section>
-                    <section id="why" data-state="no-footer" data-background-image="images/obama-why.gif">
-                        <div style="position: absolute; right: 0px; top: 650px">
-                            <small style="font-size: 0.3em;">Image from <a href="https://tenor.com/view/obama-wtf-why-president-wut-gif-12221156" target="_blank">tenor</a></small>
-                        </div>
-                    </section>
-                    <section id="why-camel-on-quarkus">
-                        <h2>Why Camel on Quarkus?</h2>
-                        <p>&nbsp;</p>
-                        <table id="container-first" class="plaintable" style="font-size: 2.0rem; width: unset;">
-                            <colgroup>
-                                <col style="width:0.5em; border-right: 0.5em solid #00000000;">
-                                <col style="width:12em">
-                                <col style="width:0.5em; border-right: 0.5em solid #00000000;">
-                                <col style="width:18em">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <td><a>💾</a></td>
-                                    <td>Small&nbsp;size&nbsp;on&nbsp;disk</td>
-                                    <td><a>✓</a></td>
-                                    <td>Small&nbsp;container&nbsp;images</td>
-                                </tr>
-                                <tr>
-                                    <td><a>🚀</a></td>
-                                    <td>Fast boot time</td>
-                                    <td><a>✓</a></td>
-                                    <td>Instant scale up</td>
-                                </tr>
-                                <tr>
-                                    <td><a>🔬</a></td>
-                                    <td>Low&nbsp;memory&nbsp;footprint</td>
-                                    <td><a>✓</a></td>
-                                    <td>More containers with the same<br>amount of RAM</td>
-                                </tr>
-                             </tbody>
-                        </table>
-                    </section>
-                    <section id="devmode">
-                        <pre style="font-size: 48px; width: 60%"><code class="hljs shell">$ mvn compile quarkus:dev</code></pre>
-                        <p style="font-size: 32px">Quarkus dev mode:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <section id="seamless-integration">
+                        <h2>Seamless integration</h2>
+                        <h3>with Quarkus</h3>
                         <ul class="check" style="font-size: 30px;">
                             <li>Live reload</li>
                             <li>Dev services (via Testcontainers)
@@ -284,32 +247,7 @@
                                 </ul>
                             </li>
                             <li>Continuous testing</li>
-                            <li><a href="https://quarkus.io/guides/dev-ui">DevUI</a>
-                                <ul>
-                                    <li>Swagger UI, GraphQL UI, Health UI</li>
-                                </ul>
-                            </li>
                         </ul>
-                        <p style="font-size: 24px;"><br><a href="https://quarkus.io/guides/dev-mode-differences#dev-mode-features">https://quarkus.io/guides/dev-mode-differences#dev-mode-features</a></p>
-                    </section>
-                    <section id="devjoy">
-                        <h2>Developer 😍</h2>
-                        <ul class="check">
-                            <li>Isolation from GraalVM CLI/SPI</li>
-                            <li>Rich ecosystem of extensions:
-                                <ul>
-                                    <li>Community: <a href="https://code.quarkus.io/" target="_blank">code.quarkus.io</a></li>
-                                    <li>Red Hat supported: <a href="https://code.quarkus.redhat.com/" target="_blank">code.quarkus.redhat.com</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    <section id="camel-quarkus-extensions">
-                        <p style="margin-bottom: 0px;"><img src="images/camel-quarkus-extensions.svg"></p>
-                        <p style="float: right; font-size: 24px; margin-top: 0px; text-align: left;">
-                            <a href="https://code.quarkus.io/?extension-search=origin:platform%20camel" target="_blank">code.quarkus.io</a> (with native support)<br>
-                            <a href="https://camel.apache.org/camel-quarkus/latest/reference/index.html" target="_blank">Camel Quarkus Docs</a> (all)
-                        </p>
                     </section>
                     <section id="demo" data-state="no-footer" data-background-image="images/demo.jpg">
                         <div style="position: absolute; right: 0px; top: 650px">
@@ -364,8 +302,6 @@
                         <ul class="check" style="font-size: 2.3rem" >
                             <li style="margin-bottom: 20px">Apache 🐪 = an integration toolkit with 350+ connectors</li>
                             <li style="margin-bottom: 20px">🚀🔬😍 on Quarkus</li>
-                            <li style="margin-bottom: 20px">Scale to 0️⃣ and easy to deploy to Knative</li>
-                            <li style="margin-bottom: 20px">Stream data from/to Kafka</li>
                         </ul>
                     </section>
                     <section id="camel-links">
