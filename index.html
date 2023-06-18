@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>reveal.js</title>
+        <title>Supersonic Subatomic SOAP</title>
 
         <link rel="stylesheet" href="dist/reset.css">
         <link rel="stylesheet" href="dist/reveal.css">
@@ -15,9 +15,84 @@
     </head>
     <body>
         <div class="reveal">
+            <!-- <div class="conf-banner">
+                <img src="images/" alt="" style="position: absolute;bottom: 0;">
+            </div> -->
+            <div id="footer" class="footer">
+                <img src="images/apache-cxf-logo.svg" class="left"><a href="https://twitter.com/ppalaga">@ppalaga</a><img src="images/quarkus-logo-with-text.svg" class="right" style="height: 25px; margin-top: 12px;">
+            </div>
             <div class="slides">
-                <section>Slide 1</section>
-                <section>Slide 2</section>
+                <section id="intro">
+                    <!--<section id="sponsors" data-background-image="images/BaselOne21.png" data-state="no-footer">
+                    </section>-->
+                    <section id="cover" data-background-image="images/supersonic-subatomic-soap.png" data-state="no-footer">
+                        <p>&nbsp;</p>
+                        <h3 style="color: #fff; font-weight: bold; text-align: left; font-size: 50px;">Supersonic subatomic</h3>
+                        <h1 style="color: #fff; font-weight: bold; text-align: left; font-size: 80px;">SOAP</h1>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p  style="color: #fff; font-weight: bold; text-align: right; font-size: 30px;">Peter Palaga</p>
+                        <p  style="color: #fff; font-weight: bold; text-align: right; font-size: 30px;"><small><a href="https://twitter.com/ppalaga">@ppalaga</a></small></p>
+                    </section>
+                    <section id="about-me">
+                        <p>Peter Palaga</p>
+                        <p>&nbsp;</p>
+                        <a href="https://access.redhat.com/products/red-hat-integration" target="_blank"><img src="images/red-hat-integration-logo.svg" style="height: 2em;"></a>
+                        <a href="https://camel.apache.org/"><img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 3em; "></a>
+                        <a href="https://quarkus.io"><img src="images/quarkus-logo.svg" style="height: 1.2em; margin-left: 3em; "></a>
+                        <p style="margin-left: 8.5em">↘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↙</p>
+                        <p style="margin-left: 8.5em"><a href="https://camel.apache.org/camel-quarkus/latest/index.html">Camel Quarkus</a></p>
+                    </section>
+                    <section id="agenda">
+                        <h2>Agenda</h2>
+                        <ul>
+                            <li>SOAP WebServices intro</li>
+                            <li>Quarkus CXF</li>
+                            <li>Demo</li>
+                        </ul>
+                    </section>
+                    <section id="rpc-history">
+                        <img src="images/rpc-timeline.svg">
+                        <aside class="notes" data-markdown>
+                            <textarea data-template>
+CORBA
+* The first RPC standard to bring interop across languages and platforms
+* Its Integface Definition Language (IDL) aloowed for detailed descriprion of data and operations
+* Binary messages; while formally not bound to any specific transport, the TCP based IIOP was the most common combo.
+* Downsides:
+  * The standard was said to be somewhat bloated, often updated and incoherent due to competing vendor interests
+  * Incompatible and incomplete implementations
+  * No standard port, IIOP often hard to pass through corporate firewalls
+SOAP
+* The XML messages and HTTP easier to work with
+* Backed by strong vendors like Microsoft and IBM
+                            </textarea>
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <section id="demo">
+                        <h1>Demo</h1>
+                        <ul>
+                            <li><a href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-cxf/dev/user-guide/create-project.html">Create new project</a></li>
+                            <li><a href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-cxf/dev/user-guide/first-soap-web-service.html">First SOAP WebService</a></li>
+                            <li><a href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-cxf/dev/user-guide/first-soap-client.html">First SOAP client</a></li>
+                        </ul>
+                        <aside class="notes" data-markdown>
+                            <textarea data-template>
+Server:
+* Take care to use the same package as in the docs
+* Show logging
+
+Client:
+* Save the WSDL as CalculatorService.wsdl
+* First generate the client classes, import and then start using it
+                            </textarea>
+                        </aside>
+                    </section>
+
+                </section>
             </div>
         </div>
 
@@ -30,6 +105,7 @@
             // - https://revealjs.com/initialization/
             // - https://revealjs.com/config/
             Reveal.initialize({
+                progress: true,
                 hash: true,
 
                 // Learn about plugins: https://revealjs.com/plugins/
