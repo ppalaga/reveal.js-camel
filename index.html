@@ -43,6 +43,56 @@
                         <a href="https://quarkus.io"><img src="images/quarkus-logo.svg" style="height: 1.2em; margin-left: 3em; "></a>
                         <p style="margin-left: 8.5em">↘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↙</p>
                         <p style="margin-left: 8.5em"><a href="https://camel.apache.org/camel-quarkus/latest/index.html">Camel Quarkus</a></p>
+                        <aside class="notes" data-markdown>
+                            <textarea data-template>
+                                I am a Java developer and for me, the history of the whole universe has just two parts:
+                                * Before Quarkus
+                                * After Quarkus
+
+                                Quarkus is amazing and I am truly happy that I can work with it.
+
+                                If you ask why, Quarkus has brought the unique concept of augmentation:
+
+                                I.e. tasks that Java applications normally execute at startup, are rather performed at build time.
+
+                                A typical example: REST endpoints with RESTeasy:
+
+                                ```
+                                @GET
+                                @Path("/orders")
+                                List<Order> getOrders() { ... }
+                                ```
+
+                                In a traditional Java application, there would be some deployment time routine that scans
+                                all java bytecode for @GET @Path, etc, and creates the found endpoints using the API of the underlying HTTP server
+
+                                This takes both time and memory.
+
+                                Hence performing this kind of tasks at build time saves both time and memory.
+
+                                ## The most upvoted issue of Quarkus*
+
+                                https://github.com/quarkusio/quarkus/issues/4005
+
+                                *) till it was implemented around 2020
+
+                                Who cares for SOAP in 2020's? Quarkus is supposed to be *modern*!
+                                What is SOAP WebServices anyway?
+
+                                The demand was surprisingly high, I can confirm this from Conferences where I was presenting Quarkus intros
+                                The same came through RH support.
+
+                                The community organized itself:
+
+                                One guy created a PoC, another improved it, another gave feedback from using it in production (!)
+
+                                However, that was not enough to support it as a RH product.
+
+                                Test coverage, documentation. Which I started doing around August 2022
+
+
+                            </textarea>
+                        </aside>
                     </section>
                     <section id="agenda">
                         <h2>Agenda</h2>
@@ -58,7 +108,7 @@
                             <textarea data-template>
 CORBA
 * The first RPC standard to bring interop across languages and platforms
-* Its Integface Definition Language (IDL) aloowed for detailed descriprion of data and operations
+* Its Integface Definition Language (IDL) alowed for detailed descriprion of data and operations
 * Binary messages; while formally not bound to any specific transport, the TCP based IIOP was the most common combo.
 * Downsides:
   * The standard was said to be somewhat bloated, often updated and incoherent due to competing vendor interests
