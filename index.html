@@ -32,29 +32,24 @@
                 <section id="intro">
                     <!--<section id="sponsors" data-background-image="images/BaselOne21.png" data-state="no-footer">
                     </section>-->
-                    <section id="cover" data-state="no-footer">
+                    <section id="cover" data-background-image="images/waiting-for-a-maven-build.jpg" data-state="no-footer">
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <h1>Maven</h1>
-                        <h3>my life is short!</h3>
+                        <h1 style="color: #fff; font-weight: bold; text-align: left; font-size: 80px; margin-left: 30px;">Maven</h1>
+                        <h3 style="color: #fff; font-weight: bold; text-align: left; font-size: 50px; margin-left: 30px;">my life is short!</h3>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <p>Peter Palaga</p>
-                        <p><small><a href="https://twitter.com/ppalaga">@ppalaga</a></small></p>
+                        <p  style="color: #fff; font-weight: bold; text-align: left; font-size: 50px; margin-left: 30px;">Peter Palaga</p>
+                        <p  style="color: #fff; font-weight: bold; text-align: left; font-size: 50px; margin-left: 30px;"><small><a href="https://twitter.com/ppalaga">@ppalaga</a></small></p>
                     </section>
                     <section id="about-me">
-                        <h2>About me</h2>
+                        <p>Peter Palaga</p>
                         <p>&nbsp;</p>
-                        <img src="images/red-hat-integration-logo.svg" style="height: 2em;">
-                        <img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 2em; ">
-                        <aside class="notes">
-                            <p>RH Integration:</p>
-                            <ul>
-                                <li>Fuse</li>
-                                <li>3scale API Management</li>
-                                <li>AMQ</li>
-                            </ul>
-                        </aside>
+                        <a href="https://access.redhat.com/products/red-hat-integration" target="_blank"><img src="images/red-hat-integration-logo.svg" style="height: 2em;"></a>
+                        <a href="https://camel.apache.org/"><img src="css/theme/camel-assets/images/camel.svg" style="height: 2em; margin-left: 1.2em; "></a>
+                        <a href="https://quarkus.io"><img src="images/quarkus-logo.svg" style="height: 1.2em; margin-left: 1.2em; "></a>
+                        <p style="margin-left: 6.5em">↘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↙</p>
+                        <p style="margin-left: 6.5em"><a href="https://camel.apache.org/camel-quarkus/latest/index.html">Camel Quarkus</a></p>
                     </section>
                     <section id="projects-i-build-often">
                         <h4>Projects I build often</h4>
@@ -92,20 +87,21 @@
                             <small><sup>2)</sup> <code>mvn clean && find . -type f -name 'pom.xml' | wc -l</code></small>
                         </p>
                     </section>
-                    <section id="wait-for-maven" data-background-image="images/waiting-for-a-maven-build.jpg" data-state="no-footer">
-                        <div style="position: absolute; float: left; margin-left: -100px; margin-top: 0px;">
-                            <h2 style="color: #fff; font-weight: bold; text-align: left; font-size: 80px;">Waiting<br>for<br> a<br> Maven<br> build...</h2>
-                            <small style="color: #fff; font-size: 0.3em;">Image from <a href="https://imgflip.com/memetemplate/123293403/Skull-waiting-for-reply">imgflip</a></small>
-                        </div>
-                    </section>
                     <section id="agenda">
                         <h2>Agenda</h2>
                         <ul>
+                            <li>Maven lifecycle</li>
                             <li>Skipping mojos</li>
                             <li><code>mvnd</code> a.k.a. Maven Daemon</li>
                             <li>Vertical scaling</li>
                             <li>Incrememental builds with GIB</li>
                         </ul>
+                    </section>
+                </section>
+                <section id="maven-intro-chapter">
+                    <section id="maven-intro">
+                        <h2>Maven lifecycle</h2>
+                        <img src="images/maven-lifecycle.svg">
                     </section>
                 </section>
                 <section id="skip-mojos">
@@ -121,27 +117,8 @@
                             <li>Tests, and various source checks can be skipped</li>
                         </ul>
                     </section>
-                    <section id="more-candidates-for-skipping-1">
-                        <h3>Find candidates for skipping (1/3)</h3>
-                        <p><code><a href="https://github.com/khmarbaise/maven-buildtime-profiler">maven-buildtime-profiler</a></code></p>
-                        <ul>
-                            <li>A Maven extension</li>
-                            <li>Outputs per-mojo per-module exec. times</li>
-                            <li>Exec. times not summed up per mojo across modules - limited usefulness</li>
-                            <li>An <a href="images/maven-buildtime-profiler-report.txt">example</a></li>
-                        </ul>
-                    </section>
-                    <section id="more-candidates-for-skipping-2">
-                        <h3>Find candidates for skipping (2/3)</h3>
-                        <p><code><a href="https://scans.gradle.com/#maven">Gradle build scans for Maven</a></code></p>
-                        <ul>
-                            <li>A Maven extension</li>
-                            <li>Allows sorting by execution time</li>
-                            <li>An <a href="https://scans.gradle.com/s/yf2ws35ebhq4a/timeline?sort=longest">example</a></li>
-                        </ul>
-                    </section>
-                    <section id="more-candidates-for-skipping-3">
-                        <h3>Find candidates for skipping (3/3)</h3>
+                    <section id="more-candidates-for-skipping">
+                        <h3>Find candidates for skipping</h3>
                         <p><code><a href="https://github.com/jvm-profiling-tools/async-profiler">async-profiler</a></code> or any other Java profiler</p>
                         <ul>
                             <li><code>export MAVEN_OPTS="-agentpath:/path/to/libasyncProfiler.so=start, event=cpu,file=mvn-profile.html"</code></li>
@@ -307,7 +284,7 @@ End of Maven init: 1634117025765</span>
                         <p style="font-size: 1.5rem;"><a href="https://github.com/apache/maven-mvnd" target="_blank">https://github.com/apache/maven-mvnd</a></p>
                         <ul>
                             <li>Started by <a href="https://twitter.com/gnodet">Guillaume Nodet</a> in 2019</li>
-                            <li>24 releases since then</li>
+                            <li>27 releases since then</li>
                             <li>Donated to the ASF Maven Project in December 2021</li>
                         </ul>
                         <p><a href="https://twitter.com/mvndaemon" rel="nofollow"><img src="https://camo.githubusercontent.com/eca91a719d9b5623bbf24a22ddc4ade4170bf95daf20921f561d1140887db9c1/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f75726c2f68747470732f747769747465722e636f6d2f6d766e6461656d6f6e2e7376673f7374796c653d736f6369616c266c6162656c3d466f6c6c6f772532302534306d766e6461656d6f6e" alt="Twitter" data-canonical-src="https://img.shields.io/twitter/url/https/twitter.com/mvndaemon.svg?style=social&amp;label=Follow%20%40mvndaemon" style="max-width:100%;"></a></p>
@@ -352,6 +329,20 @@ End of Maven init: 1634117025765</span>
                                 </td>
                             </tr>
                         </table>
+                    </section>
+                    <section id="mvnd-demo">
+                        <h2><code>mvnd</code> demo</h2>
+                        <pre style="width: 100%; margin: 0px; font-size: 0.4em"><code class="hljs shell" style="max-height: unset;" data-noescape data-trim>$ git clone camel quarkus
+$ cd camel-quarkus
+$ mvnd install -Dquickly
+...
+# Try CTRL B, + and - keystrokes
+# Check mvnd --status and mvnd --help in another terminal
+$ mvnd install -Dquickly
+...
+$ mvnd install -Dquickly
+...
+</code></pre>
                     </section>
                     <section id="mvnd-speed-gains">
                         <h3><code>mvnd</code> speed gains</h3>
@@ -449,12 +440,21 @@ End of Maven init: 1634117025765</span>
                         </ul>
                         <img src="/images/smart-builder-scheduler.png" style="height: 400px;">
                         <aside class="notes">
-The standard multi-threaded scheduler is using a rather naive and simple approach of using dependency-depth information in the project. It builds everything at a given dependency-depth before continuing to the next level.
-The Takari Smart Builder is using a more advanced approach of dependency-path information. Projects are aggressively built along a dependency-path in topological order as upstream dependencies have been satisfied.
+The standard multi-threaded scheduler is using a rather
+naive and simple approach of using dependency-depth information in the project.
+It builds everything at a given dependency-depth before continuing to the next level.
+The Takari Smart Builder is using a more advanced approach of dependency-path information.
+Modules are aggressively built along a dependency-path in topological order as soon as their
+dependencies are satisfied.
                         </aside>
                     </section>
                     <section id="hidden-deps">
-                        <small>Issues of parallel builds</small>
+                        <p><code>mvnd</code></p>
+                        <h1>Known issues</h1>
+                        <p>and</p>
+                        <h1>Drawbacks</h1>
+                    </section>
+                    <section id="hidden-deps">
                         <h2>Hidden dependencies</h2>
 
                         <ul style="font-size: 30px;">
@@ -478,7 +478,7 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
                     </section>
                     <section id="make-hidden-deps-explicit">
                         <h3>Make hidden dependencies explicit</h3>
-<pre style="width: 100%; margin: 0px; font-size: 0.4em"><code class="hljs xml" style="max-height: unset;"><dependency>                                    <!-- Add this in C -->
+<pre style="width: 100%; margin: 0px; font-size: 0.4em"><code class="hljs xml" style="max-height: unset;"><dependency>                                    &lt;!-- Add this in C --&gt;
     <groupId>org.my-group</groupId>
     <artifactId>B</artifactId>
     <version>${project.version}</version>
@@ -494,7 +494,6 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
 <p>This won't add any real dependency to <code>C</code> but it will guarantee that <code>B</code> is fully built before <code>C</code></p>
                     </section>
                     <section id="concurrent-local-repo">
-                        <small>Issues of parallel builds</small>
                         <h2>Local repository access</h2>
                         <ul>
                             <li>Two modules may download the same artifact concurrently</li>
@@ -502,7 +501,6 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
                         </ul>
                     </section>
                     <section id="broken-plugins">
-                        <small>Issues of parallel builds</small>
                         <h2>Broken plugins</h2>
                         <p>Plugins may do nasty things</p>
                         <ul>
@@ -516,9 +514,7 @@ The Takari Smart Builder is using a more advanced approach of dependency-path in
                         <h2><code>mvnd</code> drawbacks</h2>
                         <ul class="fragment" style="font-size: 30px;">
                             <li>Blocks a few gigs of RAM (configurable)</li>
-                            <li>Better not on the CI</li>
                             <li>Windows issues and testing catching up gradualy</li>
-                            <li>Class loader caching may have issues in some situations</li>
                         </ul>
                     </section>
                     <section id="mvnd-help">
@@ -779,7 +775,7 @@ mvnd value types:
                         <img class="fragment" alt="Can we do better?" src="images/costs.png" style="float: left; position: absolute; bottom: -100px;margin-left: 100px; z-index: 20">
                     </section>
                     <section id="vertical-scaling-costs">
-                        <h3>Costs of vertical scaling</h3>
+                        <h3>Costs laptop vs. desktop</h3>
                         <table class="plaintable" style="font-size: 25px;">
                             <tr>
                                 <td>Machine</td>
@@ -818,13 +814,15 @@ mvnd value types:
                                 <td>0.21 KWh*</td>
                             </tr>
                             <tr class="fragment" data-fragment-index="3">
-                                <td>€/year (0.3 €/kWh)</td>
-                                <td>23 €</td>
+                                <td>€/year (0.25 CHF/kWh**)</td>
+                                <td>19 €</td>
                                 <td></td>
-                                <td>80 €</td>
+                                <td>68 €</td>
                             </tr>
                         </table>
-                        <p class="fragment" data-fragment-index="2" style="font-size: 20px;"><br>*) Measured with a budget power meter from a hobby market</p>
+                        <p class="fragment" data-fragment-index="2" style="font-size: 20px;">*) Measured with a budget power meter from a hobby market
+                            <br>**) <a href="https://www.strompreis.elcom.admin.ch/municipality/351?category=H2">strompreis.elcom.admin.ch / Bern</a> Kategorie H2: 2'500 kWh/Jahr ~ 4-Zimmerwohnung mit Elektroherd
+                        </p>
                     </section>
                 </section>
                 <section id="gib">
@@ -865,7 +863,7 @@ mvnd value types:
                         <ul class="check">
                             <li>Skip unessential mojos</li>
                             <li>Maven daemon to keep the building JVM warm</li>
-                            <li>Larger machine</li>
+                            <li>More CPU cores & RAM</li>
                             <li>Incremental builds with GIB</li>
                         </ul>
                     </section>
